@@ -40,7 +40,6 @@ namespace RomeinPoging2
             this.Six = new System.Windows.Forms.Button();
             this.Five = new System.Windows.Forms.Button();
             this.Four = new System.Windows.Forms.Button();
-            this.Eight = new System.Windows.Forms.Button();
             this.Seven = new System.Windows.Forms.Button();
             this.Clear = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -129,6 +128,7 @@ namespace RomeinPoging2
             this.Divide.TabIndex = 13;
             this.Divide.Text = "/";
             this.Divide.UseVisualStyleBackColor = true;
+            this.Divide.Click += new System.EventHandler(this.Divide_Click);
             // 
             // Multiply
             // 
@@ -139,6 +139,7 @@ namespace RomeinPoging2
             this.Multiply.TabIndex = 12;
             this.Multiply.Text = "*";
             this.Multiply.UseVisualStyleBackColor = true;
+            this.Multiply.Click += new System.EventHandler(this.Multiply_Click);
             // 
             // Six
             // 
@@ -147,7 +148,7 @@ namespace RomeinPoging2
             this.Six.Name = "Six";
             this.Six.Size = new System.Drawing.Size(40, 40);
             this.Six.TabIndex = 11;
-            this.Six.Text = "C";
+            this.Six.Text = "D";
             this.Six.UseVisualStyleBackColor = true;
             this.Six.Click += new System.EventHandler(this.Six_Click);
             // 
@@ -158,7 +159,7 @@ namespace RomeinPoging2
             this.Five.Name = "Five";
             this.Five.Size = new System.Drawing.Size(40, 40);
             this.Five.TabIndex = 10;
-            this.Five.Text = "V";
+            this.Five.Text = "C";
             this.Five.UseVisualStyleBackColor = true;
             this.Five.Click += new System.EventHandler(this.Five_Click);
             // 
@@ -173,17 +174,6 @@ namespace RomeinPoging2
             this.Four.UseVisualStyleBackColor = true;
             this.Four.Click += new System.EventHandler(this.Four_Click);
             // 
-            // Eight
-            // 
-            this.Eight.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Eight.Location = new System.Drawing.Point(58, 145);
-            this.Eight.Name = "Eight";
-            this.Eight.Size = new System.Drawing.Size(40, 40);
-            this.Eight.TabIndex = 15;
-            this.Eight.Text = "M";
-            this.Eight.UseVisualStyleBackColor = true;
-            this.Eight.Click += new System.EventHandler(this.Eight_Click);
-            // 
             // Seven
             // 
             this.Seven.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -191,7 +181,7 @@ namespace RomeinPoging2
             this.Seven.Name = "Seven";
             this.Seven.Size = new System.Drawing.Size(40, 40);
             this.Seven.TabIndex = 14;
-            this.Seven.Text = "D";
+            this.Seven.Text = "M";
             this.Seven.UseVisualStyleBackColor = true;
             this.Seven.Click += new System.EventHandler(this.Seven_Click);
             // 
@@ -212,7 +202,6 @@ namespace RomeinPoging2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(258, 260);
             this.Controls.Add(this.Clear);
-            this.Controls.Add(this.Eight);
             this.Controls.Add(this.Seven);
             this.Controls.Add(this.Divide);
             this.Controls.Add(this.Multiply);
@@ -247,7 +236,6 @@ namespace RomeinPoging2
         private System.Windows.Forms.Button Six;
         private System.Windows.Forms.Button Five;
         private System.Windows.Forms.Button Four;
-        private System.Windows.Forms.Button Eight;
         private System.Windows.Forms.Button Seven;
         private System.Windows.Forms.Button Clear;
     }

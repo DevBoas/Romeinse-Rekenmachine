@@ -260,6 +260,18 @@ namespace RomeinPoging2
             {
                 result = romanNummer1 - romanNummer2;
             }
+            else if (operation == '*')
+            {
+                result = romanNummer1 * romanNummer2;
+            }
+            else if (operation == '*')
+            {
+                result = romanNummer1 * romanNummer2;
+            }
+            else if (operation == '/')
+            {
+                result = romanNummer1 / romanNummer2;
+            }
             if (result > 0)
             {
                 Output.Text = intToRoman(result, "", 0, 1, '?', result);
@@ -331,5 +343,18 @@ namespace RomeinPoging2
             Output.Text = "";
         }
 
+        private void Multiply_Click(object sender, EventArgs e)
+        {
+            operand1 = Output.Text;
+            operation = '*';
+            Output.Text = "";
+        }
+
+        private void Divide_Click(object sender, EventArgs e)
+        {
+            operand1 = Output.Text;
+            operation = '/';
+            Output.Text = "";
+        }
     }
 }
