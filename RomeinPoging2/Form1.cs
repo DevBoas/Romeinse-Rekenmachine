@@ -249,8 +249,8 @@ namespace RomeinPoging2
             int romanNummer1 = romanToInt(operand1);
             int romanNummer2 = romanToInt(Output.Text);
             int result = 0;
-            MessageBox.Show("Nummer1 = " + romanNummer1.ToString()
-                + " Nummer2 = " + romanNummer2.ToString());
+            /*MessageBox.Show("Nummer1 = " + romanNummer1.ToString()
+                + " Nummer2 = " + romanNummer2.ToString());*/
             if (operation == '+')
             {
                 result = romanNummer1 + romanNummer2;
@@ -274,7 +274,12 @@ namespace RomeinPoging2
             }
             if (result > 0)
             {
+                Information.Text += " " + Output.Text + " = ";
                 Output.Text = intToRoman(result, "", 0, 1, '?', result);
+            }
+            else
+            {
+                Information.Text = "Less than zero";
             }
         }
 
@@ -326,6 +331,7 @@ namespace RomeinPoging2
         private void Clear_Click(object sender, EventArgs e)
         {
             operand1 = "";
+            Information.Text = "";
             Output.Text = "";
         }
 
@@ -334,6 +340,7 @@ namespace RomeinPoging2
             operand1 = Output.Text;
             operation = '+';
             Output.Text = "";
+            Information.Text = operand1 + " " + operation.ToString();
         }
 
         private void Minus_Click(object sender, EventArgs e)
@@ -341,6 +348,7 @@ namespace RomeinPoging2
             operand1 = Output.Text;
             operation = '-';
             Output.Text = "";
+            Information.Text = operand1 + " " + operation.ToString();
         }
 
         private void Multiply_Click(object sender, EventArgs e)
@@ -348,6 +356,7 @@ namespace RomeinPoging2
             operand1 = Output.Text;
             operation = '*';
             Output.Text = "";
+            Information.Text = operand1 + " " + operation.ToString();
         }
 
         private void Divide_Click(object sender, EventArgs e)
@@ -356,5 +365,6 @@ namespace RomeinPoging2
             operation = '/';
             Output.Text = "";
         }
+
     }
 }

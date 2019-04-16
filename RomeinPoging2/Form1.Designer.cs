@@ -42,6 +42,7 @@ namespace RomeinPoging2
             this.Four = new System.Windows.Forms.Button();
             this.Seven = new System.Windows.Forms.Button();
             this.Clear = new System.Windows.Forms.Button();
+            this.Information = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Calculate
@@ -196,11 +197,21 @@ namespace RomeinPoging2
             this.Clear.UseVisualStyleBackColor = true;
             this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
+            // Information
+            // 
+            this.Information.BackColor = System.Drawing.SystemColors.Window;
+            this.Information.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.Information.Location = new System.Drawing.Point(15, 15);
+            this.Information.Name = "Information";
+            this.Information.Size = new System.Drawing.Size(112, 13);
+            this.Information.TabIndex = 18;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(258, 260);
+            this.ClientSize = new System.Drawing.Size(244, 260);
+            this.Controls.Add(this.Information);
             this.Controls.Add(this.Clear);
             this.Controls.Add(this.Seven);
             this.Controls.Add(this.Divide);
@@ -238,6 +249,7 @@ namespace RomeinPoging2
         private System.Windows.Forms.Button Four;
         private System.Windows.Forms.Button Seven;
         private System.Windows.Forms.Button Clear;
+        private System.Windows.Forms.Label Information;
     }
 }
 
